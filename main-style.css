@@ -2,51 +2,94 @@
 
 body{
     margin: 0;
+    box-sizing: border-box;
+    transition: all 333ms;
     
 }
 /* NAV */
 nav{
     width: 100%;
-    height: 10%;
+    height: 100%;
     padding: 20px;
-    display: flex;
-    opacity: .8;
-    align-items: center;
+    z-index:1000;
+    display: none;
+   
     position:fixed;
+    justify-content: center;
     top: 0;
-    transition: all 250ms;
-    background-color: #091A26;
+    background-color: #05111a;
+    background-image: url("logo6.png");
+     background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+    
 }
-.nav-active{
-    height: 100vh;
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav div{
+    padding: 30px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    align-self: center;
     transition: all 250ms;
 }
-nav .toggle{
+nav div:hover{
+    background-color: #245e88;
+    transition: all 250ms;
+}
+nav p{
+    color: #ffe920;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    justify-self: center;
+    }
+nav p span{
+        color:white;
+        text-transform: uppercase;
+       
+        justify-self: center;
+        }
+nav button{
+    width: 10vw;
+
+}
+
+/* -------------------------- */
+ .toggle-navbar{
+    z-index: 2000;
+    margin: 30px;
     height: 30px;
     width: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
+    
 }
-nav .toggle div{
+.toggle-navbar div{
     height: 4px;
      border-radius: 10px;
 }
-nav .toggle div:nth-child(1){
+ .toggle-navbar div:nth-child(1){
     width: 66%;
     background-color: rgb(255, 255, 255);
   
 }
-nav .toggle div:nth-child(2){
+.toggle-navbar div:nth-child(2){
     
     background-color: #ffe920;
     width: 33%;
 }
-nav .toggle div:nth-child(3){
+ .toggle-navbar div:nth-child(3){
     
     background-color: rgb(255, 255, 255);
     width: 100%
-}
+} 
 
 /* -------------------------- */
 
@@ -279,28 +322,27 @@ body{
 /*--------------- page4 --------- */
 
 .gallery{
+    height: 100vh;
     display: grid;
-    padding: 30px;
-    gap: 30px;
+    align-content: space-between;
     place-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3,1fr);
-   
+    gap: 30px;
+    padding: 10px;
     grid-template-areas: 
     "img1 img3"
     "img2 img4"
-    
     "img5 img6";
-     
-    
 }
 .gallery .img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    height: 70%;
     
-    height: 40vw;
+  
     
 }
 .gallery .img1{
@@ -329,6 +371,65 @@ body{
     background-image: url("mountains-1112911_640.jpg");
     grid-area: img6;
 }
+/*--------------- page5 --------- */
+.page5{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh 10vh 10vh 20vh;
+    gap:20px;
+    padding: 30px;
+}
+.page5 button{
+    grid-column: 1/3;
+    background-color: #333D46;
+    border:6px solid #12202B;
+    border-radius: 30px;
+    color: #F16A6C;
+    width: 60vw;
+    justify-self: center;
+    font-size: 1.2em;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Khula', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nosifer', cursive;
+    font-family: 'Russo One', sans-serif;
+}
+.page5 .magazine{
+    background-image: url("aus.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/3;
+    border:8px solid #12202B;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.page5 .magazine span{
+    font-size: 2em;
+    padding: 30px;
+    color: #ffe920;
+  
+}
+.page5 .magazine span+span{
+    font-size: 1em;
+    padding: 30px;
+    color: white;
+  
+}
+.page5 .icons{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.page5 .icons img{
+    justify-self: center;
+    align-self: center;
+    
+}
+
+
 
 /*--------------- footer --------- */
 footer{
@@ -411,24 +512,24 @@ input[type=email] {
 .footer-content p span{
     color: #ffe920;
 }
-.icon{
+footer .icon{
     grid-column: 1/3;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
-.fb{
+footer .fb{
     grid-row: 7/9;
 }
-.ig{
+footer .ig{
     grid-row: 4/6;
    
 }
-.mail{
+footer .mail{
     grid-row: 10/12;
 }
-.footer-content .contact{
+footer .footer-content .contact{
     border-bottom: 2px solid white;
     color: white;
     font-size: 1.1em;
@@ -438,14 +539,14 @@ input[type=email] {
     justify-content: flex-end;
     margin-right: 30px;
 }
-.footer-content a{
+footer .footer-content a{
     text-align: right;
     text-decoration: none;
     color:white;
     margin-right: 30px;
     padding-top: 5px;
 }
-.contact + a{
+footer .contact + a{
     grid-column: 3/5;
     grid-row: 5/6;
 }
@@ -453,7 +554,7 @@ a + a{
     grid-column: 3/5;
     grid-row: 6/7;
 }
-.author{
+footer .author{
     grid-row: 8/9;
     grid-column: 3/5;
     border-top: 2px solid white;
@@ -462,7 +563,7 @@ a + a{
     text-align: right;
     margin-right: 30px;
 }
-.author + span{
+footer .author + span{
     grid-row: 11/12;
     border-top: 2px solid white;
     grid-column: 3/5;
