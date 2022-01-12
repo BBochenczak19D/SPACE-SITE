@@ -13,17 +13,14 @@ nav{
     padding: 20px;
     z-index:1000;
     display: none;
-   
     position:fixed;
     justify-content: center;
     top: 0;
     background-color: #05111a;
     background-image: url("logo6.png");
-     background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   
-    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
 }
 nav a{
     text-decoration: none;
@@ -292,6 +289,9 @@ body{
 .page3  p span{
     color: #ffe920;
 }
+.page3 hr{
+    display: none;
+}
 .page3-text{
     display: grid;
     place-items:center;
@@ -420,6 +420,9 @@ body{
     padding: 30px;
     color: white;
   
+}
+.page5 p{
+    display: none;
 }
 .page5 .icons{
     grid-column: 1/3;
@@ -713,10 +716,12 @@ footer .author + span{
     /* ----------------- page2 -----*/
     .page2{
         grid-template-columns: repeat(8,1fr);
-        grid-template-rows: 20vh 1fr 1fr 1fr 1fr;
+        grid-template-rows: 15vh 1fr 1fr 30vh;
+        height: 90vw;
     }
     .page3{
         grid-column: 1/5;
+        grid-row: 2/3;
     }
     .baner{
         grid-column: 5/9;
@@ -725,7 +730,71 @@ footer .author + span{
     .page2-header{
         grid-column: 1/5;
         grid-row: 1/2;
-       height: 15vh;
+        background: none;
+        height: 15vh;
     }
+    .page3-text{
+        grid-column: 1/5;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .page3 p:first-child{
+        font-size: 1.6em;
+    }
+    .page3-text .left{
+        grid-column: 1/2;
+        padding: 30px;
+    }
+    .page3-text .right{
+        grid-column: 2/3;
+        padding: 30px;
+    }
+    .page5{
+       
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+    }
+    .page5 button{
+        height: 10vh;
+    }
+    .page5 .magazine{       
+        grid-column: 2/4;
+        grid-row: 1/4;
+        
+    }
+    .page5 p{
+        grid-column: 4/6;
+        font-size: 2.6em;
+        color: white;
+        align-self: flex-end;
+    }
+    .page5 p+button{
+        grid-column: 4/5;
+        width: 15vw;
+    }
+    .page5 button+button{
+        grid-column: 5/6;
+        width: 15vw;
+    }
+    .page5 .icons{
+        padding: 20px;
+        grid-column: 4/6;
+    }
+    .gallery{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 50vh 50vh;
+        
+       
+    }
+    .gallery .img{
+        padding: 30px;
+    }
+    .page5 p{
+        display: block;
+    }
+    
+    
     
 }
