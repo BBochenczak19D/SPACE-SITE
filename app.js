@@ -5,6 +5,7 @@ const logo_p = document.querySelector(".page1-header p")
 const logo_span = document.querySelector(".page1-header span")
 console.log(navbar_li)
 
+
 toggle_navbar.addEventListener("click", function(){ 
     logo_p.style.display="none";
     logo_span.style.display="none";
@@ -12,6 +13,7 @@ toggle_navbar.addEventListener("click", function(){
     navbar.style.transition = "all 500ms";
     navbar.style.display="grid";
     navbar.style.gridTemplateColumns="1fr";
+    toggle_navbar.style.display = "none"
     
     
 
@@ -21,7 +23,8 @@ toggle_navbar.addEventListener("click", function(){
      navbar.style.display="none";
      logo_p.style.display="block";
     logo_span.style.display="block";
-    document.body.style.overflow = "auto"
+    document.body.style.overflow = "auto";
+    toggle_navbar.style.display = "block"
  })
  navbar_li.forEach(navbar_li => {
     navbar_li.addEventListener('click',function (){
@@ -32,3 +35,4 @@ toggle_navbar.addEventListener("click", function(){
     }
     )
   })
+
