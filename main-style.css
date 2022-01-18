@@ -490,7 +490,7 @@ footer p{
     grid-column: 1/5;
     grid-row: 3/5;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 input{
@@ -515,7 +515,7 @@ input[type=text] {
 }
 input[type=submit] {
     grid-row: 1/2;
-    grid-column: 2/3;
+    grid-column: 2/4;
     cursor: pointer;
     color: #ffe920;
     font-weight: 200;
@@ -535,15 +535,19 @@ input[type=email] {
 input[type=checkbox] {
     grid-row: 2/3;
     grid-column: 2/3;
-    
-    height: 50%;
-    width: 50%;
+    align-self: center;
+    justify-content: flex-end;
+    height: 40%;
+    width: 40%;
    
 }
 .footer-form p{
-    font-size:5px;
+    
+    width: 40vw;
+    font-size: 12px;
     grid-row: 2/3;
-    grid-column: 2/3;
+    grid-column: 3/4;
+    
 }
 
 .footer-content{
@@ -955,7 +959,7 @@ footer cite{display: none;}
         grid-row: 2/3;
         font-size: 1.6em;
 
-     width: 50%;
+    
 
     }
     input[type=submit]:hover{
