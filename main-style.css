@@ -431,6 +431,7 @@ body{
 .page5 .magazine{
     background-image: url("aus.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     grid-column: 1/3;
     border:8px solid #12202B;
@@ -472,7 +473,7 @@ footer{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(12,1fr);
     height: 100vh;
-    background-image: url("tlo1.png");
+    background-image: url("tlo1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -638,7 +639,7 @@ footer cite{display: none;}
 @media screen and (min-width: 1000px){
     main{
         background-image: none;
-        background-image: url('tloxd.png');
+        background-image: url('tloxd.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         
@@ -881,7 +882,7 @@ footer cite{display: none;}
     }
     .page5 .magazine:hover{       
         background-image: url('galaxy.jpg') ;
-        background-position: center;
+        background-position: top;
         transition:all 2s ease-in-out;
         
     }
